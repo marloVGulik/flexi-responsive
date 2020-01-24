@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Archivo&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -10,23 +11,86 @@
     <title>Document</title>
 </head>
 <body>
-    <ul class="dropDown">
-        <li><i class=" fa-lg fas fa-bars bars"></i></li>
+    <ul class="dropDown disableIfLarge" style="z-index: 1; top: 0rem;">
+        <li><button onclick="showMenu(this.parentNode.parentNode)" class="bars"><i class=" fa-lg fas fa-bars"></i></button></li>
         <li class="dropDownContent"><a>(06) --- --- --</a></li>
         <li class="dropDownContent"><a>(06) --- --- --</a></li>
         <li class="dropDownContent"><a>Ma - Zo: 8:00 - 22:00</a></li>
         <li class="dropDownContent"><a>Dashboard</a></li>
     </ul>
-    <ul class="dropDown" style="top: 3em; background-color: #FFFFFF;">
-        <li><i class=" fa-lg fas fa-bars bars" style="border-color: #000000; color: #000000;"></i></li>
-        <li class="dropDownContent">TEST?</li>
+
+    <ul class="dropDown disableIfLarge" style="position: relative; background-color: #FFFFFF; z-index: 0;">
+        <li>
+            <button onclick="showMenu(this.parentNode.parentNode)" class="bars"><i class=" fa-lg fas fa-bars" style="border-color: #000000; color: #000000;"></i></button>
+            <img src="Data/Images/nyan.gif" class="gif">
+        </li>
+        <li class="dropDownContent">Theorieles</li>
+        <li class="dropDownContent">Opfris cursus</li>
+        <li class="dropDownContent">Contact</li>
         <li class="dropDownContent">
             <ul class="dropDown" style="background-color: #313131;">
-                <li>Autorijles</li>
-                <li class="dropDownContent"><a>TEST</a></li>
+                <li><button onclick="showMenu(this.parentNode.parentNode)" style="border: none; background-color: #00000000">Autorijles</button></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
+            </ul>
+        </li>
+        <li class="dropDownContent">
+            <ul class="dropDown" style="background-color: #313131;">
+                <li><button onclick="showMenu(this.parentNode.parentNode)" style="border: none; background-color: #00000000">Motorrijles</button></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
+                <li class="dropDownContent"><a>ERR:UNKNOWN_DATA</a></li>
             </ul>
         </li>
     </ul>
-    <!-- <img src="Data//Images/" alt="Image" width="100%"> -->
+    <div id="slideshow1" class="slideShow">
+        <img src="Data/Images/stock1.jpg" alt="Image" class="slideshowTop">
+        <img src="Data/Images/stock2.jpg" alt="Image" class="slideshowTop">
+        <img src="Data/Images/stock3.jpg" alt="Image" class="slideshowTop">
+        <img src="Data/Images/stock4.jpg" alt="Image" class="slideshowTop">
+        <img src="Data/Images/stock5.jpg" alt="Image" class="slideshowTop">
+    </div>
+    <br>
+    <div id="mainPage">
+        <div class="textitem">
+            <i class="fas fa-car-side fa-2x" id="auto"></i>
+            <h1>PROEFLES</h1>
+            <hr>
+            <p>
+                Weet u het nog niet zeker maar wilt u het toch even proberen bij flex,
+                dat kan, want met een vrijblijvende intakeles zit je nergens aan vast.
+                Jij voelt meteen of er een klik is tussen jou en de rijinstructeu.
+                is er geen klik, dan zjin er nog andere FLEXi rijinstructeur.
+                Ook bij andere rijinstructeur geldt de vrijblijvende intakeles! Wel zo mooi.
+            </p>
+            <button id="trail">GRATIS proefles</button>
+        </div>
+    
+        <div class="textitem">
+            <i class="fas fa-map fa-2x" id="map"></i>
+            <h1>LOCATIES</h1>
+            <hr>
+            <p id="text2">Onze rijinstructeurs zijn verspreid over wel bijna heel Nederland.
+                Er is dus bijna altijd wel een rijinstructeur bij jou in de buurt,
+                is er bij jou in de buurt nog geen FLEXi rijschool. Bel dan even met ons.
+                Wij kijken dan samen of we een FLEXi rijinstructeurvoor jou kunnen regelen,
+                klick <a id="hier" href="https://i.kym-cdn.com/photos/images/original/001/477/329/0ed.jpg">hier</a> de locaties.
+            </p>
+        </div>
+        <div class="textitem">
+            <i class="fas fa-graduation-cap fa-2x" id="hat"></i>
+            <h1>RIJLESSEN</h1>
+            <hr>
+            <p id="text3">De rijlessen van FLEXi worden op basis van een instructiekaart voorbereid en uitgevoed.
+                op de instructiekaart houdt de FLEXi rijinstructeur jouw vorderingen in de gaten.
+                Ook gebruiken de meeste FLEXi rijinstructeurs een dashcame, zodat de les of een deel van de les teruggekeken wordt.
+                Hier halen jij en jou FLEXi rijinstructeur de pas en nav en bespreekt dit met jou.
+            </p>
+        </div>
+    </div>
+    <iframe class="video" width="1280" height="712" src="https://www.youtube.com/embed/6EyCTHgSFME"></iframe>
+
+    <script>initiateSlideshow()</script>
 </body>
 </html>

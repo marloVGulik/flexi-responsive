@@ -1,26 +1,36 @@
 body {
     margin: 0;
+    font-family: 'Archivo', sans-serif;
+    color: #313131;
 }
 
 .dropDown {
-    position: fixed;
+    height: 0;
+    position: sticky;
     display: inline-block;
     list-style: none;
     padding: 0;
     width: 100%;
     background-color: #EBD94C;
-    border-bottom: 1px solid #313131;
-    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 1s;
+    height: 3rem;
+    transition: 1s ease-in-out;
+    margin: 0;
+    overflow: hidden;
 }
 .dropDownContent {
+    box-sizing: border-box;
     position: relative;
-    z-index: 1;
-    display: none;
+    z-index: 5;
+    display: block;
     width: 100%;
-    line-height: 3em;
+    line-height: 3rem;
     background-color: #313131;
+    box-shadow: none;
     color: #FFFFFF;
-    transition: cubic-bezier(0.215, 0.610, 0.355, 1) 1s;
+    transition: 0.5s ease-in-out;
+    padding-left: 1rem;
+    transform: scaleY(0);
+    
 }
 .dropDownContent:hover {
     background-color: #EBD94C;
@@ -30,13 +40,94 @@ body {
     background-color: #EBD94C;
     color: #000000;
 }
-.dropDown:hover>li {
-    display: block;
+.dropDown:hover {
+    height: max-content;
+}
+.dropDown:hover>.dropDownContent {
+    transform: scaleY(1);
+}
+.slideshowTop {
+    width: 100%;
+    height: 15rem;
 }
 
 .bars {
-    padding: 0.5em;
-    margin: 0.3em;
+    padding: 0.5rem;
+    margin: 0.3rem;
     color: #F5ECA6;
     border: 1px solid #F5ECA6;
+}
+
+.textitem {
+    display: block;
+    width: 95%;
+    margin: 3rem auto 0 auto;
+}
+.textitem>h1, .textitem>p {
+    margin: 0.5rem 1rem;
+    font-weight: 100;
+}
+.textitem>h1 {
+    font-size: 24px;
+    display: inline;
+}
+.textitem>i {
+    display: inline-block;
+    color: #313131;
+}
+.textitem>hr {
+    border: none;
+    border-bottom: 1px solid #999999;
+}
+#trail {
+    width: 70%;
+    height: 3rem;
+    background-color: #EBD94C;
+    border: none;
+    margin: 1rem auto;
+    display: block;
+}
+#trailPC {
+    display: none;
+    width: 30%;
+    height: 3rem;
+    background-color: #EBD94C;
+    border: none;
+    margin: 1rem auto;
+}
+
+.video {
+    max-width: 90%;
+    max-height: 10rem;
+    display: block;
+    margin: 1rem auto;
+}
+
+.gif {
+    width: 50%;
+    height: 2.75rem;
+    float: right;
+}
+
+
+
+
+
+@media (min-width: 768px) {
+    .textitem {
+        display: inline-block;
+        width: 33%;
+        vertical-align: top;
+    }
+    #mainPage {
+        width: 70%;
+        margin: auto;
+    }
+    .video {
+        max-width: 70%;
+        max-height: 35rem;
+    }
+    .disableIfLarge>li {
+        display: inline-block;
+    }
 }
