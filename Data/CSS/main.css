@@ -29,22 +29,13 @@ body {
     color: #FFFFFF;
     transition: 0.5s ease-in-out;
     padding-left: 1rem;
+    font-size: 1rem;
     transform: scaleY(0);
     
-}
-.dropDownContent:hover {
-    background-color: #EBD94C;
-    color: #000000;
 }
 .dropDownContent:active {
     background-color: #EBD94C;
     color: #000000;
-}
-.dropDown:hover {
-    height: max-content;
-}
-.dropDown:hover>.dropDownContent {
-    transform: scaleY(1);
 }
 .slideshowTop {
     width: 100%;
@@ -108,6 +99,9 @@ body {
     height: 2.75rem;
     float: right;
 }
+.disableOnSmall {
+    display: none;
+}
 
 
 
@@ -128,6 +122,61 @@ body {
         max-height: 35rem;
     }
     .disableIfLarge>li {
+        margin-right: 0;
+        vertical-align: middle;
+        text-align: end;
         display: inline-block;
+        transform: scaleY(1);
+        height: 5rem;
+        width: 12%;
+        background-color: #FFFFFF00;
+        color: #313131;
+        overflow: auto;
+        text-transform: uppercase;
+    }
+    .disableIfLarge>li>a {
+        line-height: 5rem;
+    }
+    .disableIfLarge>li>ul {
+        height: 5rem;
+        background-color: #00000000;
+    }
+    .disableIfLarge>li>ul>li {
+        height: 100%;
+        background-color: #00000000;
+    }
+    .disableIfLarge>li>ul>li>button {
+        font-size: 1rem;
+        text-align: right;
+        height: 5rem;
+        width: 100%;
+        color: #313131;
+    }
+    .disableIfLarge {
+        vertical-align: top;
+        height: max-content;
+        text-align: center;
+    }
+    .disableIfLarge>li>button {
+        display: none;
+    }
+    .disableIfLarge>li>img {
+        float: left;
+        height: 100%;
+        width: 10rem;
+    }
+    .dropDownContent {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+    .slideshowTop {
+        height: 45rem;
+    }
+    .disableOnSmall {
+        display: inline-block;
+    }
+    .icons>i {
+        margin: 0.5rem;
+        margin-top: 2rem;
     }
 }
